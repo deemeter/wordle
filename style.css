@@ -1,0 +1,167 @@
+*{
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.wrapper {
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+
+#title{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+hr{
+    margin-bottom: 45px;
+    display: block;
+    width: 100%;
+    color: lightgrey;
+}
+
+table{
+    /* margin: auto; */
+    border-spacing: 5px;
+}
+
+td{
+    border: 2px solid lightgrey;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: center;
+    text-transform: uppercase;
+    width: 60px;
+    height: 60px;
+}
+
+
+
+.correct{
+    /* background-color: #7463A3; */
+    background-color: #957fb8;
+    color: white;
+}
+
+.present{
+    /* background-color: #F0E467; */
+    background-color: #C0A36E;
+    color: white;
+}
+
+.wrong{
+    background-color: gray;
+    color: white;
+}
+
+.error-input{
+    animation: horizontal-shaking .1s;
+}
+
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+   }
+#answerTable{
+    
+    width: 200px;
+    text-align: center;
+    border: 2px solid lightgray;
+    padding:10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .keyboard{
+        width: fit-content;
+        height: fit-content;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    
+    
+    .keyboard-row{
+        width: 100%;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+    .keyTile{
+        border: 2px solid lightgray;
+        padding: 20px 20px;
+        border-radius: 10px;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 5px;
+        display: flex;
+        width: 16px;
+        /* flex:1; */
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+    }
+    
+    .enter, .backspace{
+        width: auto;
+    }
+}
+
+/* Стили для телефона */
+@media screen and (max-width: 767px) {
+    .keyboard{
+        width: 100%;
+        height: fit-content;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    
+    .keyboard-row{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .keyTile{
+        border: 2px solid lightgray;
+        padding: 10px 10px;
+        border-radius: 5px;
+        color: black;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 5px;
+        display: flex;
+        width: 30px;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+    }
+    
+    .enter, .backspace{
+        width: 50px;
+    }
+}
